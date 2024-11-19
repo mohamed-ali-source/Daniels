@@ -1,0 +1,1035 @@
+/* ---------------general--------------------- */
+.about, .services, .portfolio, .numbers, .team{
+    padding: 6.25rem 0 4.375rem;
+}
+.clients, .contact{
+    padding: 6.25rem 0;
+}
+.services, .clients, .team{
+    background-color: var(--primary-bg);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: "poppins-regular";
+    src: url("../fonts/Poppins/Poppins-Regular.woff2") format("woff2"),
+    url("../fonts/Poppins/Poppins-Regular.woff") format("woff"),
+    url("../fonts/Poppins/Poppins-Regular.ttf") format("ttf");
+}
+@font-face {
+    font-family: "poppins-semibold";
+    src: url("../fonts/Poppins/Poppins-SemiBold.woff2") format("woff2"),
+    url("../fonts/Poppins/Poppins-SemiBold.woff") format("woff"),
+    url("../fonts/Poppins/Poppins-SemiBold.ttf") format("ttf");
+}
+@font-face {
+    font-family: "poppins-bold";
+    src: url("../fonts/Poppins/Poppins-Bold.woff2") format("woff2"),
+    url("../fonts/Poppins/Poppins-Bold.woff") format("woff"),
+    url("../fonts/Poppins/Poppins-Bold.ttf") format("ttf");
+}
+@font-face {
+    font-family: "montserrat-thin";
+    src: url("../fonts/Montserrat/Montserrat-Thin.woff2") format("woff2"),
+    url("../fonts/Montserrat/Montserrat-Thin.woff") format("woff"),
+    url("../fonts/Montserrat/Montserrat-Thin.ttf") format("ttf");
+}
+@font-face {
+    font-family: "montserrat-black";
+    src: url("../fonts/Montserrat/Montserrat-Black.woff2") format("woff2"),
+    url("../fonts/Montserrat/Montserrat-Black.woff") format("woff"),
+    url("../fonts/Montserrat/Montserrat-Black.ttf") format("ttf");
+}
+@font-face {
+    font-family: "montserrat-bold";
+    src: url("../fonts/Montserrat/Montserrat-Bold.woff2") format("woff2"),
+    url("../fonts/Montserrat/Montserrat-Bold.woff") format("woff"),
+    url("../fonts/Montserrat/Montserrat-Bold.ttf") format("ttf");
+}
+@font-face {
+    font-family: "montserrat-semibold";
+    src: url("../fonts/Montserrat/Montserrat-SemiBold.woff2") format("woff2"),
+    url("../fonts/Montserrat/Montserrat-SemiBold.woff") format("woff"),
+    url("../fonts/Montserrat/Montserrat-SemiBold.ttf") format("ttf");
+}
+@font-face {
+    font-family: "montserrat-extrabold";
+    src: url("../fonts/Montserrat/Montserrat-ExtraBold.woff2") format("woff2"),
+    url("../fonts/Montserrat/Montserrat-ExtraBold.woff") format("woff"),
+    url("../fonts/Montserrat/Montserrat-ExtraBold.ttf") format("ttf");
+}
+@font-face {
+    font-family: "montserrat-extralight";
+    src: url("../fonts/Montserrat/Montserrat-ExtraLight.woff2") format("woff2"),
+    url("../fonts/Montserrat/Montserrat-ExtraLight.woff") format("woff"),
+    url("../fonts/Montserrat/Montserrat-ExtraLight.ttf") format("ttf");
+}
+@font-face {
+    font-family: "montserrat-medium";
+    src: url("../fonts/Montserrat/Montserrat-Medium.woff2") format("woff2"),
+    url("../fonts/Montserrat/Montserrat-Medium.woff") format("woff"),
+    url("../fonts/Montserrat/Montserrat-Medium.ttf") format("ttf");
+}
+@font-face {
+    font-family: "montserrat-regular";
+    src: url("../fonts/Montserrat/Montserrat-Regular.woff2") format("woff2"),
+    url("../fonts/Montserrat/Montserrat-Regular.woff") format("woff"),
+    url("../fonts/Montserrat/Montserrat-Regular.ttf") format("ttf");
+}
+:root{
+    --primary-bg:#f7f7f7;
+    --secondary-bg:#1c1c1c;
+    --icon-input-bg:#f4f4f4;
+    --main-color:#fff;
+    --primary-color:#748182;
+    --secondary-color:#343434;
+    --third-color:#999999;
+    --tab-nav-color:#222;
+    --slider-private-color:#888;
+    --dott-dark-color:#869791;
+    --dott-light-color:#d6d6d6;
+}
+h1,h2,h3,h4,h5,h6{
+    color: var(--secondary-color);
+}
+a{
+    font-family: "poppins-regular";
+    text-decoration: none;
+    color: #fff;
+}
+p{
+    color: var(--primary-color);
+}
+img{
+    width: 100%;
+    display: block;
+}
+ul{
+    list-style-type: none;
+}
+/* --------------end general------------------- */
+/* --------------start navbar-------------------- */
+#navbar .navbar-brand{
+    text-transform: uppercase;
+    font-size: 1.125rem ;
+    font-family: 'montserrat-black';
+    letter-spacing: 0.0625rem;
+    color: var(--secondary-bg);
+}
+#navbar ul li{
+    margin: 0.625rem 0.625rem 0px;
+    padding: 0.4375rem;
+    position: relative;
+}
+#navbar ul li .nav-link{
+        position: relative;
+        padding: 0;
+        margin: 0;
+        --bs-navbar-nav-link-padding-x:0;
+        font-size: 0.875rem;
+        color: #111;
+    }
+#navbar ul li .nav-link::after{
+        content: "";
+        height: 0.125rem;
+        position: absolute;
+        right: 100%;
+        left: 0;
+        bottom: 0;
+        transition: all 0.5s;
+        background-color: #111;
+    }
+#navbar ul li .active::after{
+    right: 0;
+}
+/* #navbar ul li .nav-link:focus::after{
+    right: 0%;
+} */
+body:not(body:has(:target)) a[href="#home"]::after,
+body:has(#home:target) a[href="#home"]::after,
+body:has(#about:target) a[href="#about"]::after,
+body:has(#services:target) a[href="#services"]::after,
+body:has(#works:target) a[href="#works"]::after,
+body:has(#clients:target) a[href="#clients"]::after,
+body:has(#team:target) a[href="#team"]::after,
+body:has(#contact:target) a[href="#contact"]::after
+{
+    right: 0;
+}
+@media (max-width:992px){
+    .navbar-nav {
+        align-items: center;
+    }
+}
+/* --------------end navbar------------------- */
+/* ---------------start home--------------------- */
+header{
+    background-image: url(../images/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.65);
+    z-index: 2;
+}
+#home{
+    position: relative;
+    z-index: 10;
+}
+.home .caption{
+    text-align: center;
+}
+.home .caption h5 {
+    font-family: "montserrat-extrabold";
+    font-size: 3.125rem;
+    font-weight: 800;
+    margin-bottom: 0.625rem;
+    color: var(--main-color);
+    position: relative;
+}
+.home .caption .blc {
+    font-family: "montserrat-extralight";
+    font-size: 2.75rem;
+    font-weight: 200;
+    color: var(--main-color);
+    display: inline-block;
+    padding-right: 2rem;
+}
+.home .caption h5::after {
+    content: "";
+    position: absolute;
+    animation: typing 10s infinite;
+    font-family: "montserrat-extralight";
+    font-size: 3rem;
+    display: block;
+    bottom: -7.5rem;
+    left: -150%;
+    right: -150%;
+    margin-top: 1.875rem;
+    margin-bottom: 3rem;
+}
+@keyframes typing {
+    0%{
+        content: "I Am L|";
+    }
+    1%{
+        content: "I Am La|";
+    }
+    2%{
+        content: "I Am Lar|";
+    }
+    3%{
+        content: "I Am Larr|";
+    }
+    4%{
+        content: "I Am Larry|";
+    }
+    5%{
+        content: "I Am Larry |";
+    }
+    6%{
+        content: "I Am Larry D|";
+    }
+    7%{
+        content: "I Am Larry Da|";
+    }
+    8%{
+        content: "I Am Larry Dan|";
+    }
+    9%{
+        content: "I Am Larry Dani|";
+    }
+    10%{
+        content: "I Am Larry Danie|";
+    }
+    11%{
+        content: "I Am Larry Daniel|";
+    }
+    12%{
+        content: "I Am Larry Daniels|";
+    }
+    13%{
+        content: "I Am Larry Daniels |";
+    }
+    14%{
+        content: "I Am Larry Daniels |";
+    }
+    16%{
+        content: "I Am Larry Daniels |";
+    }
+    16%{
+        content: "I Am Larry Daniels |";
+    }
+    17%{
+        content: "I Am Larry Daniels |";
+    }
+    18%{
+        content: "I Am Larry Daniels |";
+    }
+    19%{
+        content: "I Am Larry Daniels |";
+    }
+    20%{
+        content: "I Am Larry Daniels |";
+    }
+    21%{
+        content: "I Am Larry Daniels |";
+    }
+    22%{
+        content: "I Am Larry Daniels |";
+    }
+    23%{
+        content: "I Am Larry Daniels |";
+    }
+    24%{
+        content: "I Am Larry Daniels|";
+    }
+    25%{
+        content: "I Am Larry Daniel|";
+    }
+    26%{
+        content: "I Am Larry Danie|";
+    }
+    27%{
+        content: "I Am Larry Dani|";
+    }
+    28%{
+        content: "I Am Larry Dan|";
+    }
+    29%{
+        content: "I Am Larry Da|";
+    }
+    30%{
+        content: "I Am Larry D|";
+    }
+    31%{
+        content: "I Am Larry |";
+    }
+    32%{
+        content: "I Am Larry|";
+    }
+    33%{
+        content: "I Am Larr|";
+    }
+    34%{
+        content: "I Am Lar|";
+    }
+    35%{
+        content: "I Am La|";
+    }
+    36%{
+        content: "I Am L|";
+    }
+    37%{
+        content: "I Am |";
+    }
+    38%{
+        content: "I Am De|";
+    }
+    39%{
+        content: "I Am Dev|";
+    }
+    40%{
+        content: "I Am Deve|";
+    }
+    41%{
+        content: "I Am Devel|";
+    }
+    42%{
+        content: "I Am Develo|";
+    }
+    43%{
+        content: "I Am Develop|";
+    }
+    44%{
+        content: "I Am Develope|";
+    }
+    45%{
+        content: "I Am Developer|";
+    }
+    46%{
+        content: "I Am Developer |";
+    }
+    47%{
+        content: "I Am Developer |";
+    }
+    48%{
+        content: "I Am Developer |";
+    }
+    49%{
+        content: "I Am Developer |";
+    }
+    50%{
+        content: "I Am Developer |";
+    }
+    51%{
+        content: "I Am Developer |";
+    }
+    52%{
+        content: "I Am Developer |";
+    }
+    53%{
+        content: "I Am Developer |";
+    }
+    54%{
+        content: "I Am Developer |";
+    }
+    55%{
+        content: "I Am Developer |";
+    }
+    56%{
+        content: "I Am Developer |";
+    }
+    57%{
+        content: "I Am Developer |";
+    }
+    58%{
+        content: "I Am Developer |";
+    }
+    59%{
+        content: "I Am Developer |";
+    }
+    60%{
+        content: "I Am Developer|";
+    }
+    61%{
+        content: "I Am Develope|";
+    }
+    62%{
+        content: "I Am Develop|";
+    }
+    63%{
+        content: "I Am Develo|";
+    }
+    64%{
+        content: "I Am Devel|";
+    }
+    65%{
+        content: "I Am Deve|";
+    }
+    66%{
+        content: "I Am Dev|";
+    }
+    67%{
+        content: "I Am De|";
+    }
+    68%{
+        content: "I Am D|";
+    }
+    69%{
+        content: "I Am |";
+    }
+    70%{
+        content: "I Am D|";
+    }
+    71%{
+        content: "I Am De|";
+    }
+    72%{
+        content: "I Am Des|";
+    }
+    73%{
+        content: "I Am Desi|";
+    }
+    74%{
+        content: "I Am Desig|";
+    }
+    75%{
+        content: "I Am Design|";
+    }
+    76%{
+        content: "I Am Designe|";
+    }
+    77%{
+        content: "I Am Designer|";
+    }
+    78%{
+        content: "I Am Designer |";
+    }
+    79%{
+        content: "I Am Designer |";
+    }
+    80%{
+        content: "I Am Designer |";
+    }
+    81%{
+        content: "I Am Designer |";
+    }
+    82%{
+        content: "I Am Designer |";
+    }
+    83%{
+        content: "I Am Designer |";
+    }
+    84%{
+        content: "I Am Designer |";
+    }
+    85%{
+        content: "I Am Designer |";
+    }
+    86%{
+        content: "I Am Designer |";
+    }
+    87%{
+        content: "I Am Designer |";
+    }
+    88%{
+        content: "I Am Designer |";
+    }
+    89%{
+        content: "I Am Designer |";
+    }
+    90%{
+        content: "I Am Designer |";
+    }
+    91%{
+        content: "I Am Designer|";
+    }
+    92%{
+        content: "I Am Designe|";
+    }
+    93%{
+        content: "I Am Design|";
+    }
+    94%{
+        content: "I Am Desig|";
+    }
+    95%{
+        content: "I Am Desi|";
+    }
+    96%{
+        content: "I Am Des|";
+    }
+    97%{
+        content: "I Am De|";
+    }
+    98%{
+        content: "I Am D|";
+    }
+    99%{
+        content: "I Am |";
+    }
+    100%{
+        content: "I Am|";
+    }
+}
+.home i{
+    margin: 3.125rem 4px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0.625rem;
+    border-radius: 50%;
+}
+@media (max-width:576px){
+    .home .caption h5::after {
+        font-size: 2rem;
+        left: -65%;
+        right: -65%;
+    }
+    .home .caption h5 {
+        font-size: 3rem;
+    }
+}
+/* ---------------end home------------------- */
+/* ---------------start about------------------- */
+#about .hero {
+    padding: 0 0 1.875rem 1.875rem;
+    position: relative;
+    margin-bottom: 1.875rem;
+}
+.hero img{
+    position: relative;
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    z-index: 2;
+}
+.hero::after{
+    content: "";
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 0.0625rem;
+    bottom: 0rem;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+}
+#about .info{
+    margin-bottom: 1.875rem;
+    /* overflow: auto; */
+    height: auto;
+}
+#about .info h3{
+    margin-bottom: 0.3125rem;
+    font-size: 1.875rem;
+    font-family: "montserrat-extrabold";
+}
+#about .info .description{
+    margin-bottom: 1.25rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    font-family: "poppins-regular";
+    display: inline-block;
+    font-size: 0.875rem;
+}
+#about .info p{
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.9375rem;
+    color: #748182;
+    font-family: "poppins-regular";
+}
+#about .info .skills{
+    margin-top: 1.875rem;
+}
+.progress{
+    box-shadow:unset 0 0 0.625rem black;
+}
+.progress-bar{
+    background-color: #1c1c1c;
+    border-radius: 0.25rem;
+    padding: 0.3125rem 0.625rem;
+}
+#about .info .skills span{
+    font-size: 0.8125rem;
+    font-family: "montserrat-semibold";
+}
+#about .info .group-btns{
+    margin-bottom: 0.625rem;
+}
+#about .info .group-btns a{
+    padding: 0.625rem 1.875rem;
+    margin-top: 1.25rem;
+    font-size: 0.8125rem;
+    border: 0.0625rem solid #1c1c1c;
+    border-radius: 0.3125rem;
+    transition: all 0.5s;
+}
+#about .info .group-btns .black-btn{
+    background-color: var(--secondary-bg);
+}
+#about .info .group-btns .black-btn:hover{
+    background: transparent !important;
+    color: #343434 !important;
+}
+#about .info .group-btns .white-btn{
+    color: var(--secondary-color);
+}
+#about .info .group-btns .white-btn:hover{
+    background: var(--secondary-bg);
+    color: #eee;
+}
+/* ---------------end about------------------- */
+/* ---------------start services------------------- */
+.services{
+    text-align: center;
+}
+.title-section{
+    text-align: center;
+}
+.title-section h3{
+    font-family: "montserrat-black";
+    font-size: 40px;
+    position: relative;
+    display: inline-block;
+    z-index: 4;
+    margin-bottom: 5rem;
+}
+.title-section h3::after{
+    content: "";
+    width: 100%;
+    height: 1.875rem;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    position: absolute;
+    bottom: -0.625rem;
+    left: 0;
+    z-index: -1;
+}
+.services .inner{
+    padding: 3.125rem 1.25rem;
+    background: #fff;
+    box-shadow: 0px 0.625rem 1.875rem -0.5rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.875rem;
+    border-radius: 0.3125rem;
+}
+.services .inner p{
+    word-spacing: 0.125rem;
+    font-size: 0.875rem;
+    color: #748182;
+    font-family: "poppins-regular";
+}
+.services .inner h6{
+    font-family: "montserrat-bold";
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.inner .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    height: 0;
+    background-color: var(--icon-input-bg);
+    padding: 2.1875rem;
+    border-radius: 50%;
+    margin-bottom: 1.25rem;
+    display: inline-block;
+    transition: all 0.5s;
+}
+.inner .icon:hover{
+    color: var(--icon-input-bg);
+    background-color: var(--secondary-bg);
+}
+.inner .icon i{
+    font-size: 1.875rem;
+}
+/* ---------------end services------------------- */
+/* ---------------start portfolio------------------ */
+.nav-tabs {
+    --bs-nav-tabs-link-active-color: color: #222;
+    --bs-nav-tabs-border-color: color: white;
+    --bs-nav-tabs-link-hover-border-color: white white white;
+    --bs-nav-tabs-link-active-border-color: white white #111;
+    --bs-nav-tabs-border-width: 0rem;
+    --bs-nav-link-padding-y:0rem;
+    --bs-nav-link-padding-x:0rem;
+}
+.nav {
+    --bs-nav-link-color: color: #222;
+    --bs-nav-link-hover-color: color: #222;
+    --bs-nav-link-font-weight: 700;
+}
+/* .navbar button:focus {
+    box-shadow: none;
+} */
+.gallery .item-img .item-overlay {
+    top: 0.3125rem;
+    left: .3125rem;
+    right: .3125rem;
+    bottom: .3125rem;
+    background: rgba(255, 255, 255, 0.95);
+    opacity: 0;
+    transition: all 0.5s;
+    z-index: 2;
+    transform: translateY(.625rem);
+    .overlay-txt {
+    transform: translate(0%, -50%);
+    }
+}
+.gallery .item-img:hover {
+    .item-overlay {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.overlay-icons .icon:hover {
+    i {
+        background: transparent;
+        color: #000;
+    }
+}
+.overlay-icons i {
+    display: inline-block;
+    font-size: .8125rem;
+    width: 1.875rem;
+    height: 1.875rem;
+    line-height: 1.75rem;
+    border-radius: 50%;
+    border: .0625rem solid #111;
+    background: #111;
+    color: #eee;
+    cursor: pointer;
+}
+.portfolio .item-img .icon i:hover {
+    background: transparent;
+    color: #000;
+}
+.portfolio .item-img:hover h6,
+  .portfolio .item-img:hover .icons {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  .portfolio .item-img h6 {
+    font-size: 0.75rem;
+    font-family: "montserrat-bold";
+    letter-spacing: 0.125rem;
+    position: relative;
+    margin-bottom: 0.9375rem;
+    /* /* -webkit-transform: translateY(-15px); */
+    transform: translateY(-0.9375rem);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    text-transform: uppercase;
+  }
+  .portfolio ul a {
+    margin: 0 0.9375rem;
+    color: #222;
+    font-family: "montserrat-bold";
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    text-transform: capitalize;
+}
+.portfolio ul a::after{
+    content: "";
+    height: 0.125rem;
+    position: absolute;
+    right: 100%;
+    left: 0;
+    bottom: -0.3125rem;
+    transition: all 0.4s;
+    background-color: #111;
+}
+.portfolio ul a:focus::after{
+    right: 0;
+} 
+/* ---------------end portfolio------------------- */
+/* ---------------start clients------------------- */
+#clients .carousel-item{
+    text-align: center;
+    color: #111;
+}
+#clients .carousel-item img{
+    width: 5.625rem;
+    height: 5.625rem;
+    border-radius: 50%;
+    margin: auto;
+    position: static;
+    display: block;
+}
+#clients .carousel-caption{
+    position: static;
+}
+#clients .carousel-caption p{
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.9375rem;
+    color: #748182;
+    font-family: "poppins-regular";
+}
+#clients .carousel-caption h6{
+    margin: 1.875rem 0 0.3125rem;
+    font-size: 1rem;
+    font-family: "montserrat-semibold";
+}
+#clients .carousel-caption span{
+    margin-bottom: 1.875rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #888;
+    font-family: "poppins-regular";
+}
+@media (min-width:992px){
+    #clients .carousel-caption{
+        width: 80%;
+        margin: auto;
+    }
+}
+#clients .carousel-indicators{
+    position: relative;
+    margin-top: 0.625rem;
+}
+#clients .carousel-indicators button{
+    width: 1.25rem;
+    height: 0px;
+    margin: 0.3125rem 0.4375rem;
+    border-radius: 50%;
+    background: #d6d6d6;
+    display: inline-block;
+}
+#clients .carousel-indicators .active{
+    background-color: #869791;
+}
+/* ---------------end clients------------------- */
+/* --------------start numbers------------------- */
+.numbers .icon{
+    margin-bottom: 0.625rem;
+    display: block;
+}
+.numbers .icon i{
+    font-size: 1.5625rem;
+    color: #343434;
+    padding-bottom: 0.625rem;
+}
+.numbers h3{
+    margin-bottom: 0.9375rem;
+    font-size: 1.875rem;
+    font-family: "montserrat-black";
+}
+.numbers p{
+    margin-bottom: 1.875rem;
+    font-size: 0.9375rem;
+    font-family: "montserrat-bold";
+}
+
+/* --------------end numbers------------------- */
+/* --------------start team-------------------  */
+.team figcaption{
+    padding: 1.5625rem;
+    background-color: #5A5A5A;
+}
+.team figcaption h4{
+    font-size: 1.5625rem;
+    font-family: "montserrat-semibold";
+    text-transform: capitalize;
+    margin-bottom: 0.3125rem;
+    color: #fff;
+}
+.team figcaption h5{
+    font-size: 1.25rem;
+    font-family: "montserrat-bold";
+    text-transform: uppercase;
+    margin-bottom: 0;
+    color: #fff;
+}
+.team .overlay {
+    transition: all 0.5s;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    inset: 0.3125rem;
+    opacity: 0;
+    transform: rotateY(180deg) scale(0.5, 0.5);
+}
+.team figure:hover .overlay {
+    opacity: 1;
+    transform: rotateY(360deg);
+}
+.team .images{
+    overflow: hidden;
+}
+.team figure img{
+    transition: all 0.5s;
+}
+.team figure:hover img {
+    transform: scale(1.2);
+}
+.team figure ul li{
+    padding:0.3125rem ;
+}
+.team figure ul li a{
+    border: 0.0625rem solid #000;
+    color: #fff;
+    background-color: #000;
+    display: block;
+    font-size: 1.25rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+.team figure ul li a:hover{
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+/* --------------end team------------------- */
+/* --------------start contact------------------- */
+.contact .content{
+    width: 85%;
+    margin: auto;
+}
+.contact h6{
+    margin-bottom: 0.625rem;
+    font-family: "montserrat-bold";
+}
+.contact p{
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.9375rem;
+    font-family: "poppins-regular";
+}
+.contact .icon{
+    font-size: 1.5625rem;
+    margin-bottom: 0.9375rem;
+    width: 3.75rem;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    transition: all 0.5s;
+    display: inline-block;
+    position: relative;
+}
+.contact .icon i{
+    font-size: 1.25rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.contact .item:hover .icon{
+    color: #f4f4f4;
+    background-color: #343434;
+}
+.contact .item{
+    margin-bottom: 1.875rem;
+    padding: 0 0.9375rem;
+}
+/* ----------------- */
+.contact form input[placeholder],
+.contact form textarea{
+    width: 100%;
+    border: 0;
+    border-radius: 0.3125rem;
+    padding: 0.625rem;
+    background: #f4f4f4;
+    margin-bottom: 0.9375rem;
+}
+.contact form input[placeholder]:focus,
+.contact form textarea:focus{
+    border: 0;
+    outline: none;
+}
+.contact form .button{
+    padding: 0.625rem 2.5rem;
+    background: #1c1c1c;
+    color: #eee;
+    cursor: pointer;
+    display: inline;
+    border: 0.0625rem solid #1c1c1c;
+    border-radius: 0.3125rem;
+    font-size: 0.8125rem;
+    transition: all 0.5s;
+}
+.contact form .button:hover{
+    background-color: #eee;
+    color: #1c1c1c;;
+}
+/* --------------end contact------------------- */
+/* --------------start footer------------------- */
+footer{
+    padding: 1.875rem;
+    background-color: #1c1c1c;
+    text-align: center;
+}
+footer p{
+    font-size: 0.8125rem;
+    line-height: 1.6;
+    margin: 0;
+    color: #748182;
+    word-spacing: 0.125rem;
+    font-family: "poppins-regular";
+}
+/* --------------end footer------------------- */
