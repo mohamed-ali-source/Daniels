@@ -148,20 +148,10 @@ ul{
 #navbar ul li .active::after{
     right: 0;
 }
-/* #navbar ul li .nav-link:focus::after{
+#navbar ul li .nav-link:focus::after{
     right: 0%;
-} */
-body:not(body:has(:target)) a[href="#home"]::after,
-body:has(#home:target) a[href="#home"]::after,
-body:has(#about:target) a[href="#about"]::after,
-body:has(#services:target) a[href="#services"]::after,
-body:has(#works:target) a[href="#works"]::after,
-body:has(#clients:target) a[href="#clients"]::after,
-body:has(#team:target) a[href="#team"]::after,
-body:has(#contact:target) a[href="#contact"]::after
-{
-    right: 0;
 }
+
 @media (max-width:992px){
     .navbar-nav {
         align-items: center;
